@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Ensures the page is displayed correctly across devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>Student Registration System</title>
+
+    <!-- Short description of the webpage (useful for SEO) -->
+    <meta name="description" content="A web-based system for managing student records, including registration, editing, and deletion.">
+
+    <!-- External CSS file for styling -->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="main-title">Student Registration Hub</h1>
+            <p class="description">Effortlessly manage student records. Register, edit, and delete details with ease.</p>
+        </div>
+    </header>
+
+    <!-- Main container to hold form and table -->
+    <div class="container">
+        
+        <!-- Student Registration Form Section -->
+        <section class="form-section">
+            <h2 class="section-title">Register New Student</h2>
+            
+            <!-- Registration Form -->
+            <form id="registrationForm" class="registration-form">
+                <!-- Student Name Input -->
+                <div class="form-group">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+
+                <!-- Student ID Input -->
+                <div class="form-group">
+                    <label for="studentId">Student ID</label>
+                    <input type="text" id="studentId" name="studentId" required>
+                </div>
+
+                <!-- Email ID Input -->
+                <div class="form-group">
+                    <label for="emailId">Email ID</label>
+                    <input type="email" id="emailId" name="emailId" required>
+                </div>
+
+                <!-- Contact Number Input -->
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number</label>
+                    <input type="tel" id="contactNumber" name="contactNumber" required>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Add Student</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Registered Students Display Section -->
+        <section class="display-section">
+            <h2 class="section-title">Registered Students</h2>
+            
+            <!-- Table Container for Student Records -->
+            <div class="table-container">
+                <table class="student-table">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Student ID</th>
+                            <th>Email ID</th>
+                            <th>Contact Number</th>
+                            <th>Actions</th> <!-- Will be used for edit/delete functionality -->
+                        </tr>
+                    </thead>
+
+                    <!-- Body where student records will be dynamically inserted -->
+                    <tbody id="studentTableBody">
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Message displayed when no students are registered -->
+            <p id="noRecordsMessage" class="no-records-message">
+                No student records found. Add a student to get started!
+            </p>
+        </section>
+
+    </div>
+    
+</body>
+</html>
